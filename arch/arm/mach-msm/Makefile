@@ -478,3 +478,4 @@ obj-$(CONFIG_HTC_MONITOR) += htc_monitor.o
 
 obj-$(CONFIG_LCD_KCAL) += board_kcal.o kcal_ctrl.o
 obj-$(CONFIG_MSM_SLEEPER) += msm-sleeper.o
+obj-$(CONFIG_HAS_MACH_MEMUTILS) += memutils/

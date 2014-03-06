@@ -284,6 +284,7 @@ config ARCH_MSM8974
 	select ARCH_WANT_KMAP_ATOMIC_FLUSH
 	select KRAIT_REGULATOR
 	select ENABLE_VMALLOC_SAVINGS
+	select HAS_MACH_MEMUTILS
 
 config ARCH_APQ8084
 	bool "APQ8084"
@@ -3203,3 +3204,9 @@ config MSM_SLEEPER
     default y
     help
       Limit max frequency while screen is off
+
+config HAS_MACH_MEMUTILS
+	default y
+	bool "Motorola MSM memcpy enhancements"
+	help
+	Faster memcpy performance for Krait
