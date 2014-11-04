@@ -791,7 +791,6 @@ static inline void inc_nr_running(struct rq *rq)
 #ifdef CONFIG_INTELLI_PLUG
 	write_seqcount_end(&nr_stats->ave_seqcnt);
 #endif
->>>>>>> 90e961b... Squashed intelli_plug v3.8 update
 }
 
 static inline void dec_nr_running(struct rq *rq)
