@@ -131,6 +131,12 @@ config CPU_FREQ_DEFAULT_GOV_INTELLIMM
           Use the CPUFreq governor 'intelliminmax' as default. This is
           governor will use only 3 different frequencies, idle, UI and max
 
+config CPU_FREQ_DEFAULT_GOV_RAGINGMOLASSES
+	bool "ragingmolasses"
+	select CPU_FREQ_GOV_RAGINMOLASSES
+	help
+	  Use the CPUFreq governor 'ragingmolasses' as default. Work in progress attempt at a good all around governor that can do either high performance or battery. Attempts to keep CPU away from max frequency as much as possible.
+
 endchoice
 
 config CPU_FREQ_GOV_PERFORMANCE
@@ -263,8 +269,15 @@ config CPU_FREQ_GOV_INTELLIDEMAND
 config CPU_FREQ_GOV_INTELLIMM
         tristate "'intelliminmax' cpufreq policy governor"
         help
-          To compile this driver as a module, choose M here: the
-          module will be called cpufreq_interactive.
+config CPU_FREQ_GOV_RAGINGMOLASSES
+	tristate "'RAGINGMOLASSES' cpufreq policy governor"
+	help
+	  'RAGINGMOLASSES' - This driver adds a cpufreq policy governor 
+	  much along the lines of ondemand but tries to keep to low 
+	  frequencies without hurting performance for workloads that need it. 
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called cpufreq_interactive.
 
           For details, take a look at linux/Documentation/cpu-freq.
 
