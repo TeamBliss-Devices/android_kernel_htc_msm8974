@@ -19,6 +19,7 @@
 /include/ "msm8226-a5-storage.dtsi"
 /include/ "msm8926-touch-a5-config.dtsi"
 
+
 / {
 	model = "MSM 8x26 A5 China";
 	compatible = "htc,a5dwg", "qcom,msm8226-mtp", "qcom,msm8226", "qcom,mtp";
